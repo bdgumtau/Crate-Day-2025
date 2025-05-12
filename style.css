@@ -1,39 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+  padding: 40px;
+  background-color: #f0f0f0;
 }
 
-#month-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-#calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  max-width: 700px;
-  margin: 0 auto 30px;
-  gap: 5px;
-}
-
-.date {
-  padding: 10px;
-  background: #e0e0e0;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.date:hover {
-  background-color: #c9dfff;
-}
-
-#player {
-  margin-top: 30px;
+#videoContainer {
+  margin-top: 20px;
 }
