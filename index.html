@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2025 Video Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>2025 Video Calendar</h1>
+
+  <div id="month-controls">
+    <button onclick="prevMonth()">Previous</button>
+    <h2 id="current-month">December 2024</h2>
+    <button onclick="nextMonth()">Next</button>
+  </div>
+
+  <div id="calendar"></div>
+
+  <div id="player">
+    <h3 id="selected-date">Select a date</h3>
+    <video id="videoPlayer" width="640" height="360" controls style="display:none;">
+      <source id="videoSource" src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p id="error-message" style="color:red;"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
