@@ -6,25 +6,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Crate Day 2025</h1>
-
-  <div id="month-controls">
-    <button onclick="prevMonth()">Previous</button>
-    <h2 id="current-month">December 2024</h2>
-    <button onclick="nextMonth()">Next</button>
-  </div>
-
-  <div id="calendar"></div>
-
-  <div id="player">
-    <h3 id="selected-date">Select a date</h3>
-    <video id="videoPlayer" width="640" height="360" controls style="display:none;">
+  <h1>Crate Day 2025 Calendar</h1>
+  <input type="date" id="datePicker" min="2024-12-01" max="2025-12-31" />
+  <div id="videoContainer">
+    <video id="videoPlayer" controls width="640" height="360">
       <source id="videoSource" src="" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <p id="error-message" style="color:red;"></p>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
