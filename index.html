@@ -2,28 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRATE DAY 2025</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>CRATE DAY 2025</h1>
-
-    <label for="datePicker">SELECT A DATE:</label><br>
-    <input type="date" id="datePicker" min="2024-12-01" max="2025-12-31" />
-
-    <div id="countdownContainer">
-      <h2 id="countdown">PICK A DATE</h2>
+    <header>
+      <h1>CRATE DAY 2025</h1>
+    </header>
+    
+    <div class="calendar">
+      <!-- Calendar will go here -->
     </div>
-
-    <div id="videoContainer">
-      <video id="videoPlayer" controls width="1280" height="720">
-        <source id="videoSource" src="" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    
+    <div class="countdown">
+      <h2>Countdown: <span id="countdown-days">363</span> days</h2>
+    </div>
+    
+    <div class="video-player">
+      <!-- Video will appear here when a date is selected -->
+      <video id="video" width="640" height="360" controls style="display: none;"></video>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
