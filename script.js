@@ -15,24 +15,57 @@ function updateCountdown() {
   countdownElement.textContent = daysRemaining;
 }
 
-// Function to generate the calendar days
+// Get the days in a month for a given year and month
+function daysInMonth(year, month) {
+  return new Date(year, month + 1, 0).getDate();
+}
+
+// Function to generate the full calendar
 function generateCalendar() {
-  const daysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
-  const currentMonth = startDate.getMonth();
-  const currentYear = startDate.getFullYear();
+  let currentYear = startDate.getFullYear();
+  let currentMonth = startDate.getMonth();
+  
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-  const totalDays = daysInMonth(currentYear, currentMonth);
-  for (let day = 1; day <= totalDays; day++) {
-    const date = new Date(currentYear, currentMonth, day);
-    const dateButton = document.createElement('div');
-    dateButton.textContent = day;
+  let monthIndex = 0;
+  let currentDate = new Date(currentYear, currentMonth, 8); // Start from 8th December 2024
 
-    // When a day is clicked, display a video
-    dateButton.onclick = function () {
-      const videoDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
-      playVideoForDate(videoDate);
-    };
-    calendarContainer.appendChild(dateButton);
+  while (currentDate <= endDate) {
+    const monthContainer = document.createElement('div');
+    monthContainer.classList.add('calendar-month');
+
+    const monthName = document.createElement('div');
+    monthName.classList.add('month-name');
+    monthName.textContent = `${months[monthIndex]} ${currentYear}`;
+    monthContainer.appendChild(monthName);
+
+    const daysInThisMonth = daysInMonth(currentYear, currentMonth);
+    const monthDaysContainer = document.createElement('div');
+    monthDaysContainer.classList.add('month-days');
+
+    for (let day = 1; day <= daysInThisMonth; day++) {
+      const dayButton = document.createElement('div');
+      dayButton.textContent = day;
+
+      // When a day is clicked, display the video
+      dayButton.onclick = function () {
+        const videoDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+        playVideoForDate(videoDate);
+      };
+
+      monthDaysContainer.appendChild(dayButton);
+    }
+
+    monthContainer.appendChild(monthDaysContainer);
+    calendarContainer.appendChild(monthContainer);
+
+    currentMonth++;
+    if (currentMonth > 11) {
+      currentMonth = 0;
+      currentYear++;
+    }
+
+    currentDate.setMonth(currentMonth);
   }
 }
 
