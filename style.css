@@ -1,17 +1,17 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #b50909;
-  text-align: center;
-  padding: 40px;
-  margin: 0;
-}
-
 #videoContainer,
 #countdownContainer {
-  margin: 20px;
+  margin: 20px auto;
+  width: fit-content; /* Ensures the container doesn't take full width */
+}
+
+#videoPlayer {
+  display: block;
+  margin: 0 auto; /* Horizontally center the video */
 }
 
 input[type="date"] {
   padding: 8px;
   font-size: 16px;
+  display: block;
+  margin: 0 auto; /* Center the date input */
 }
