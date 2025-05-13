@@ -32,5 +32,5 @@ document.getElementById("datePicker").addEventListener("change", function () {
   const daysSinceStart = Math.floor((selectedDate - startDate) / (1000 * 60 * 60 * 24));
   const countdownValue = totalDays - daysSinceStart;
 
-  countdownEl.textContent = `Countdown: ${countdownValue} day${countdownValue !== 1 ? 's' : ''} remaining until Crate Day`;
+  countdownEl.textContent = `${countdownValue} DAY${countdownValue !== 1 ? 'S' : ''} UNTIL CRATE DAY`;
 });
