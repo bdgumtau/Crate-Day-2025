@@ -24,13 +24,13 @@ document.getElementById("datePicker").addEventListener("change", function () {
   const endDate = new Date("2025-12-06");
 
   if (selectedDate < startDate || selectedDate > endDate) {
-    countdownEl.textContent = "COUNTDOWN ONLY RUNS FROM CRATE DAY 2024 TO CRATE DAY 2025";
+    countdownEl.textContent = "Countdown only runs from Crate Day 2024 to Crate Day 2025";
     return;
   }
 
   const totalDays = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
   const daysSinceStart = Math.floor((selectedDate - startDate) / (1000 * 60 * 60 * 24));
-  const countdownValue = 363 - daysSinceStart;
+  const countdownValue = totalDays - daysSinceStart;
 
-  countdownEl.textContent = `${countdownValue} DAY${countdownValue !== 1 ? 'S' : ''} REMAINING UNTIL CRATE DAY`;
+  countdownEl.textContent = `Countdown: ${countdownValue} day${countdownValue !== 1 ? 's' : ''} remaining until Crate Day`;
 });
