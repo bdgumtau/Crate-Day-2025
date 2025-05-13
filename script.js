@@ -24,7 +24,7 @@ document.getElementById("datePicker").addEventListener("change", function () {
   const endDate = new Date("2025-12-06");
 
   if (selectedDate < startDate || selectedDate > endDate) {
-    countdownEl.textContent = "Countdown only runs from Dec 8, 2024 to Dec 6, 2025.";
+    countdownEl.textContent = "Countdown only runs from Crate Day 2024 to Crate Day 2025";
     return;
   }
 
@@ -32,5 +32,5 @@ document.getElementById("datePicker").addEventListener("change", function () {
   const daysSinceStart = Math.floor((selectedDate - startDate) / (1000 * 60 * 60 * 24));
   const countdownValue = 363 - daysSinceStart;
 
-  countdownEl.textContent = `Countdown: ${countdownValue} day${countdownValue !== 1 ? 's' : ''} remaining until Crate Day 2025.`;
+  countdownEl.textContent = `Countdown: ${countdownValue} day${countdownValue !== 1 ? 's' : ''} remaining until Crate Day 2025`;
 });
