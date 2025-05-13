@@ -10,6 +10,15 @@ html, body {
   align-items: center;
 }
 
+/* For small screens, allow scrolling and fix layout */
+@media (max-height: 600px) {
+  html, body {
+    display: block; /* Disable Flexbox */
+    overflow: auto; /* Allow scrolling */
+    height: auto; /* Allow body height to expand */
+  }
+}
+
 /* Inner container for all content */
 .container {
   text-align: center;
