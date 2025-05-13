@@ -8,6 +8,7 @@ html, body {
   align-items: center;
   background-color: #b50909;
   font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 /* Inner container for all content */
@@ -22,6 +23,7 @@ html, body {
 #countdownContainer {
   margin: 20px auto;
   width: fit-content;
+  font-weight: bold;
 }
 
 #videoPlayer {
@@ -32,6 +34,7 @@ html, body {
 input[type="date"] {
   padding: 8px;
   font-size: 16px;
+  font-weight: bold;
   display: block;
   margin: 10px auto;
 }
