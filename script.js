@@ -32,5 +32,5 @@ document.getElementById("datePicker").addEventListener("change", function () {
   const daysSinceStart = Math.floor((selectedDate - startDate) / (1000 * 60 * 60 * 24));
   const countdownValue = 363 - daysSinceStart;
 
-  countdownEl.textContent = `COUNTDOWN: ${countdownValue} DAY${countdownValue !== 1 ? 'S' : ''} REMAINING UNTIL CRATE DAY`;
+  countdownEl.textContent = `${countdownValue} DAY${countdownValue !== 1 ? 'S' : ''} REMAINING UNTIL CRATE DAY`;
 });
