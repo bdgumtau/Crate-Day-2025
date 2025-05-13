@@ -8,10 +8,13 @@ body {
 
 #videoContainer,
 #countdownContainer {
-  margin-top: 20px;
+  margin: 20px auto; /* 'auto' on the sides centers the block */
+  width: 80%; /* or any appropriate width */
 }
 
 input[type="date"] {
   padding: 8px;
   font-size: 16px;
+  margin: 20px auto; /* 'auto' on the sides centers the block */
+  width: 80%; /* or any appropriate width */
 }
