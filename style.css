@@ -1,35 +1,37 @@
-#videoContainer,
-#countdownContainer {
-  margin: 20px auto;
-  width: fit-content; /* Ensures the container doesn't take full width */
-}
-
-#videoPlayer {
-  display: block;
-  margin: 0 auto; /* Horizontally center the video */
-}
-
-input[type="date"] {
-  /*padding: 8px;*/
-  font-size: 16px;
-  display: block;
-  margin: 0 auto; /* Center the date input */
-}
-
-.container {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
+/* Center everything using Flexbox */
 html, body {
-  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border: 2px solid black;
+  background-color: #b50909;
+  font-family: Arial, sans-serif;
+}
+
+/* Inner container for all content */
+.container {
+  text-align: center;
+  max-width: 800px;
+  padding: 40px;
+}
+
+/* Style containers and inputs */
+#videoContainer,
+#countdownContainer {
+  margin: 20px auto;
+  width: fit-content;
+}
+
+#videoPlayer {
+  display: block;
+  margin: 0 auto;
+}
+
+input[type="date"] {
+  padding: 8px;
+  font-size: 16px;
+  display: block;
+  margin: 10px auto;
 }
