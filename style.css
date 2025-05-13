@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   padding: 20px;
 }
@@ -16,6 +16,7 @@ body {
 header h1 {
   font-size: 3em;
   color: #333;
+  margin-bottom: 20px;
 }
 
 .calendar {
@@ -41,8 +42,42 @@ header h1 {
 .countdown {
   font-size: 1.5em;
   color: #333;
+  margin-top: 20px;
 }
 
 .video-player {
   margin-top: 20px;
+}
+
+.calendar-month {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.month-name {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.month-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+  margin-top: 10px;
+}
+
+.month-days div {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.month-days div:hover {
+  background-color: #ffeb3b;
 }
