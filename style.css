@@ -1,55 +1,48 @@
-/* Center everything using Flexbox */
-html, body {
-  height: 100%;
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
   margin: 0;
   padding: 0;
-  background-color: #b50909;
-  font-family: 'Arial Black', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #f0f0f0;
 }
 
-/* For small screens, allow scrolling and fix layout */
-@media (max-height: 600px) {
-  html, body {
-    display: block; /* Disable Flexbox */
-    overflow: auto; /* Allow scrolling */
-    height: auto; /* Allow body height to expand */
-  }
-}
-
-/* Inner container for all content */
 .container {
-  text-align: center;
-  max-width: 800px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Horizontally center children */
-  justify-content: center; /* Vertically center children if needed */
-}
-
-/* Style containers and inputs */
-#videoContainer,
-#countdownContainer {
-  margin: 20px auto;
-  width: fit-content;
-  
-}
-
-#videoPlayer {
-  display: block;
+  width: 100%;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
 }
 
-input[type="date"] {
-  padding: 8px;
-  font-size: 16px;
-  display: block;
-  margin: 10px auto;
+header h1 {
+  font-size: 3em;
+  color: #333;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
   justify-content: center;
-  align-items: center;
+  margin: 20px 0;
+}
+
+.calendar div {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calendar div:hover {
+  background-color: #ffeb3b;
+}
+
+.countdown {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.video-player {
+  margin-top: 20px;
 }
